@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_list_menu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zzb.ui.ListMenuActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/certification_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px80"
+        android:layout_gravity="center"
+        android:background="#16BB91"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="视频菜单列表"
+                android:textSize="@dimen/px30"
+                android:textColor="@color/write"
+                android:layout_centerInParent="true"/>
+
+        </com.zhy.autolayout.AutoRelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <ListView android:id="@+id/lv_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ListView>
+</com.zhy.autolayout.AutoLinearLayout>
