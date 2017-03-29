@@ -1,12 +1,12 @@
 package com.zzb.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-
 import com.zzb.adapter.MuneAdapter;
 import com.zzb.entity.MenuEntity;
 import com.zzb.utils.MyContext;
@@ -23,6 +23,7 @@ public class ListMenuActivity extends AppCompatActivity {
     ListView lvMenu;
     private Unbinder unbinder;
     private MuneAdapter adapter;
+    private String IP;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,17 +34,20 @@ public class ListMenuActivity extends AppCompatActivity {
     }
 
     private void initView() {
+        Intent intent = getIntent();
+        IP =  intent.getStringExtra("IpAddress");
         certificationToolbar.setTitle("");
         adapter = new MuneAdapter(this);
         lvMenu.setAdapter(adapter);
         MenuEntity menuEntity = new MenuEntity(getResources().getString(R.string.yaojingweiba), MyContext.yaojingweiba, MyUrl.yaojingweiba);
         adapter.addData(menuEntity);
         adapter.notifyDataSetChanged();
-
         lvMenu.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
+                Intent intent = new Intent(ListMenuActivity.this, VideoActivity.class);
+                intent.putExtra("IP",IP);
+                startActivity(intent);
             }
         });
     }

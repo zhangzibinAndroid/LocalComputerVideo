@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.zzb.ui">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name="com.zzb.application.MyApplication"
@@ -20,8 +20,8 @@
             android:name="design_height"
             android:value="1280" />
 
-
-        <activity android:name=".IPActivity"
+        <activity
+            android:name=".IPActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -29,7 +29,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ListMenuActivity"
+        <activity
+            android:name=".ListMenuActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".VideoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait"/>
     </application>
 

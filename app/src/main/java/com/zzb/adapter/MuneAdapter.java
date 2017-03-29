@@ -9,10 +9,8 @@ import android.widget.TextView;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
-import com.zzb.MyBaseAdapter;
 import com.zzb.entity.MenuEntity;
 import com.zzb.ui.R;
-import com.zzb.utils.MyUrl;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

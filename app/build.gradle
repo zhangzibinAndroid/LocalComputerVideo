@@ -32,4 +32,5 @@ dependencies {
     //屏幕适配
     compile 'com.zhy:autolayout:1.4.3'
     compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    compile 'com.linsea:universalvideoview:1.1.0@aar'
 }
